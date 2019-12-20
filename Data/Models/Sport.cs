@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-namespace ef_core_api.Models
+namespace ef_core_api.Data.Models
 {
 	public class Sport
 	{

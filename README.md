@@ -19,5 +19,6 @@ dotnet add package Microsoft.EntityFrameworkCore.Sqlite
 dotnet add package Microsoft.EntityFrameworkCore.InMemory
 ```
 
-- adding models
-- many to many relationships defined in lookup tables with naming convention Nav1(s)Nav2(s).cs for the rosters
+- adding [models](https://docs.microsoft.com/en-us/aspnet/core/data/ef-rp/intro?view=aspnetcore-3.1&tabs=visual-studio#the-data-model)
+  - many to many relationships defined in lookup tables with naming convention Nav1(s)Nav2(s).cs for the rosters
+

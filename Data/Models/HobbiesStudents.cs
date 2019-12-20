@@ -1,5 +1,5 @@
 using System;
-namespace ef_core_api.Models
+namespace ef_core_api.Data.Models
 {
   public class HobbiesStudents
   {
