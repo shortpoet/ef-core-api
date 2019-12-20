@@ -6,5 +6,7 @@ namespace ef_core_api.Data.Models
     public Guid GreekOrgEnrollmentId { get; set; }
     public Guid GreekOrgId { get; set; }
     public Guid StudentId { get; set; }
+    public GreekOrg GreekOrg { get; set; }
+    public Student Student { get; set; }
   }
 }

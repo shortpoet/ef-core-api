@@ -38,5 +38,4 @@ dotnet tool install --global dotnet-aspnet-codegenerator --version 3.0.0
 - run aspnet-codegenerator tool to scaffold razor pages, context, add context to DI in startup, add db conn string to appsettings.json
 
 ```
-dotnet aspnet-codegenerator razorpage -m Student -dc ef_core_api.Data.SchoolContext -udl -outDir Pages\Students --referenceScriptLibraries
 ```
