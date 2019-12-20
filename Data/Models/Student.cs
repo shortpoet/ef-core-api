@@ -11,10 +11,9 @@ namespace ef_core_api.Data.Models
     public DateTime EnrollmentDate { get; set; }
     public int TotalCredits { get; set; }
     public int GPA { get; set; }
-    public ICollection<Enrollment> StudentEnrollments { get; set; }
-    public ICollection<GreekOrg> StudentGreekOrgs { get; set; }
-    public ICollection<Club> StudentClubs { get; set; }
-    public ICollection<Sport> StudentSports { get; set; }
-    public ICollection<Hobby> StudentHobbies { get; set; }
+    public ICollection<CourseEnrollment> CourseEnrollments { get; set; } = new List<CourseEnrollment>();
+    public ICollection<GreekOrgEnrollment> GreekOrgEnrollments { get; set; } = new List<GreekOrgEnrollment>();
+    public ICollection<ClubEnrollment> ClubEnrollments { get; set; } = new List<ClubEnrollment>();
+    public ICollection<SportEnrollment> SportEnrollments { get; set; } = new List<SportEnrollment>();
   }
 }

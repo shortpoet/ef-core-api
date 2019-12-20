@@ -9,7 +9,7 @@ namespace ef_core_api.Data.Models
 		public string CourseTitle { get; set; }
 		public int CourseCredits { get; set; }
 
-		public ICollection<Enrollment> Enrollments { get; set; }
+		public ICollection<CourseEnrollment> CourseEnrollments { get; set; } = new List<CourseEnrollment>();
 		public Guid AddressId { get; set; }
 	}
 }

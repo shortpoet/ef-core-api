@@ -6,6 +6,6 @@ namespace ef_core_api.Data.Models
 	{
 		public Guid SportId { get; set; }
 		public string SportName { get; set; }
-		public ICollection<Student> SportStudents { get; set; }
+		public ICollection<Student> SportStudents { get; set; } = new List<Student>();
 	}
 }

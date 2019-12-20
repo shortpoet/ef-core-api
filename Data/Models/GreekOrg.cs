@@ -13,7 +13,7 @@ namespace ef_core_api.Data.Models
     public string Description { get; set; }
     public bool IsActive { get; set; }
     public DateTime YearFounded { get; set; }
-    public ICollection<Student> GreekOrgStudents { get; set; }
+    public ICollection<Student> GreekOrgStudents { get; set; } = new List<Student>();
 
   }
 }
