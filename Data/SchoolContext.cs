@@ -14,6 +14,26 @@ namespace ef_core_api.Data
         {
         }
 
-        public DbSet<ef_core_api.Data.Models.Student> Student { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<Club> Clubs { get; set; }
+        public DbSet<Sport> Sports { get; set; }
+        public DbSet<GreekOrg> GreekOrgs { get; set; }
+        public DbSet<CourseEnrollment> CourseEnrollments { get; set; }
+        public DbSet<GreekOrgEnrollment> GreekOrgEnrollments { get; set; }
+        public DbSet<ClubEnrollment> ClubEnrollments { get; set; }
+        public DbSet<SportEnrollment> SportEnrollments { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Student>().ToTable("Student");
+            modelBuilder.Entity<Course>().ToTable("Course");
+            modelBuilder.Entity<Sport>().ToTable("Sport");
+            modelBuilder.Entity<GreekOrg>().ToTable("GreekOrg");
+            modelBuilder.Entity<CourseEnrollment>().ToTable("CourseEnrollment");
+            modelBuilder.Entity<GreekOrgEnrollment>().ToTable("GreekOrgEnrollment");
+            modelBuilder.Entity<ClubEnrollment>().ToTable("ClubEnrollment");
+            modelBuilder.Entity<SportEnrollment>().ToTable("SportEnrollment");
+        }
     }
 }

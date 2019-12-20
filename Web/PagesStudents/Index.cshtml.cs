@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using ef_core_api.Data;
 using ef_core_api.Data.Models;
 
-namespace ef_core_api.PagesStudents
+namespace ef_core_api.Web.PagesStudents
 {
     public class IndexModel : PageModel
     {
@@ -23,7 +23,7 @@ namespace ef_core_api.PagesStudents
 
         public async Task OnGetAsync()
         {
-            Student = await _context.Student.ToListAsync();
+            Student = await _context.Students.ToListAsync();
         }
     }
 }

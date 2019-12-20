@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using ef_core_api.Data;
 using ef_core_api.Data.Models;
 
-namespace ef_core_api.PagesStudents
+namespace ef_core_api.Web.PagesStudents
 {
     public class CreateModel : PageModel
     {
@@ -36,7 +36,7 @@ namespace ef_core_api.PagesStudents
                 return Page();
             }
 
-            _context.Student.Add(Student);
+            _context.Students.Add(Student);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

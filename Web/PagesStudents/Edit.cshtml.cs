@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using ef_core_api.Data;
 using ef_core_api.Data.Models;
 
-namespace ef_core_api.PagesStudents
+namespace ef_core_api.Web.PagesStudents
 {
     public class EditModel : PageModel
     {
@@ -30,7 +30,7 @@ namespace ef_core_api.PagesStudents
                 return NotFound();
             }
 
-            Student = await _context.Student.FirstOrDefaultAsync(m => m.StudentID == id);
+            Student = await _context.Students.FirstOrDefaultAsync(m => m.StudentID == id);
 
             if (Student == null)
             {
@@ -71,7 +71,7 @@ namespace ef_core_api.PagesStudents
 
         private bool StudentExists(int id)
         {
-            return _context.Student.Any(e => e.StudentID == id);
+            return _context.Students.Any(e => e.StudentID == id);
         }
     }
 }
