@@ -29,7 +29,7 @@ namespace ef_core_api.Web.PagesStudents
                 return NotFound();
             }
 
-            Student = await _context.Students.FirstOrDefaultAsync(m => m.StudentID == id);
+            Student = await _context.Students.FirstOrDefaultAsync(m => m.StudentId == id);
 
             if (Student == null)
             {

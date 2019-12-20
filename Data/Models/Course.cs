@@ -5,7 +5,7 @@ namespace ef_core_api.Data.Models
 {
 	public class Course
 	{
-		public int CourseID { get; set; }
+		public int CourseId { get; set; }
 		public string CourseTitle { get; set; }
 		public int CourseCredits { get; set; }
 

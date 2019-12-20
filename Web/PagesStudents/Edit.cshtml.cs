@@ -30,7 +30,7 @@ namespace ef_core_api.Web.PagesStudents
                 return NotFound();
             }
 
-            Student = await _context.Students.FirstOrDefaultAsync(m => m.StudentID == id);
+            Student = await _context.Students.FirstOrDefaultAsync(m => m.StudentId == id);
 
             if (Student == null)
             {
@@ -56,7 +56,7 @@ namespace ef_core_api.Web.PagesStudents
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!StudentExists(Student.StudentID))
+                if (!StudentExists(Student.StudentId))
                 {
                     return NotFound();
                 }
@@ -71,7 +71,7 @@ namespace ef_core_api.Web.PagesStudents
 
         private bool StudentExists(int id)
         {
-            return _context.Students.Any(e => e.StudentID == id);
+            return _context.Students.Any(e => e.StudentId == id);
         }
     }
 }
